@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach(post => {
 
         createPage({
-            path: `wiki${post.fields.slug}`,
+            path: `${post.fields.slug}`,
             component: wikiEntry,
             context: {
                 slug: post.fields.slug
@@ -44,7 +44,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
 
     if (node.internal.type === `MarkdownRemark`) {
-        const slug = createFilePath({ node, getNode })
+        const slug = `wiki${createFilePath({ node, getNode })}`
 
         createNodeField({
             name: `slug`,
