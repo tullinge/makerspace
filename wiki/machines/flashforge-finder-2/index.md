@@ -1,5 +1,5 @@
 ---
-name: Flashforge Finder 2.0
+title: Flashforge Finder 2.0
 ---
 
 Det här är en billig och bra 3D-skrivare.
@@ -10,7 +10,7 @@ För att printa ut en CAD-fil behövs programmet Flashprint.
 
 ## Vanliga problem
 
-Plasten tog slut, vad gör jag?
+* Plasten tog slut, vad gör jag?
 
-Det har blivit en klump på skrivhuvudet!
+* Det har blivit en klump på skrivhuvudet!
 
