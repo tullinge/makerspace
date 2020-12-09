@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Tullinge Makerspace`,
     description: `Homepage and wiki for the Makerspace at Tullinge gymnasium.`,
-    author: `@gatsbyjs`,
+    author: `@einarpersson`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
