@@ -40,16 +40,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
 }
 
+function categoryFromPath(path) {
+    return path.match(/^\/(.+)\/.+/)[1]
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
 
     if (node.internal.type === `MarkdownRemark`) {
-        const slug = `wiki${createFilePath({ node, getNode })}`
+        const filePath = createFilePath({ node, getNode })
+        const slug = `/wiki${filePath}`
+        const category = categoryFromPath(filePath)
 
         createNodeField({
             name: `slug`,
             node,
             value: slug
+        })
+
+        createNodeField({
+            name: `category`,
+            node,
+            value: category
         })
     }
 }
@@ -74,7 +86,8 @@ exports.createSchemaCustomization = ({ actions }) => {
             title: String    
           }
           type Fields {
-            slug: String
+            slug: String,
+            category: String
           }
     `)
 }
