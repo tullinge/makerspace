@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .aside {
     width: 290px;
     padding: 0 1.0875rem 1.45rem
@@ -6,6 +8,7 @@
 .category {
     text-transform: capitalize;
     font-family: georgia, serif;
+    color: var(--color-primary);
 }
 
 .list {
