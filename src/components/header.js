@@ -27,6 +27,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div style={{color: 'white', letterSpacing: '3px' }}>Wikipedia</div>
     </div>
   </header>
 )
