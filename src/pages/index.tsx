@@ -12,9 +12,9 @@ const IndexPage = () => {
       <SEO title="Home" />
       <h1>Välkommen!</h1>
       <p>Här hittar du massor av hjälp för ditt skapande.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
-      </div>
+      </div> */}
       {/* <Link to="/page-2/">Go to page 2</Link> <br /> */}
       {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
     </Layout>
