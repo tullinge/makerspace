@@ -10,6 +10,7 @@ function uniques(arr) {
 }
 
 export default () => {
+  const [open, setOpen] = React.useState(false)
   const windowDimensions = useWindowDimensions()
   const { allMarkdownRemark: { nodes } } = useStaticQuery(
     graphql`query {
@@ -26,27 +27,46 @@ export default () => {
           }
         }`)
 
+  // TODO: This could and should probably be computed at build time instead of in this component. 
   const categories = uniques(nodes.map((node) => node.fields.category))
 
-  return <aside className={css.aside}>
-    <FontAwesomeIcon icon={faBars} size="1x" className={css.hamburger} />
-    <input type="text" className={css.input} />
-    <p>{windowDimensions.innerWidth}</p>
-    {categories.map((category, j) => {
-      return <div>
-        <h5 key={j} className={css.category}>{category}</h5>
-        {
-          <ul className={css.list}>
-            {nodes
-              .filter(n => n.fields.category === category)
-              .map((n, i) =>
-                <li key={i}>
-                  <Link to={n.fields.slug} className={css.link}>
-                    {n.frontmatter.title}
-                  </Link></li>)}
-          </ul>
-        }
+  const isBigScreen = () => windowDimensions.innerWidth > 688
+
+  return <>
+    <FontAwesomeIcon
+      icon={faBars}
+      style={{ display: !isBigScreen() ? 'block' : 'none' }}
+      className={css.hamburger}
+      size="2x"
+      onClick={() => setOpen(!open)}
+    />
+    <aside
+      className={css.aside}
+      style={{
+        position: !isBigScreen() ? 'fixed' : 'inherit',
+        visibility: !isBigScreen() && !open ? 'hidden' : 'visible'
+      }}
+    >
+      <input type="text" className={css.input} />
+      <div>
+        <Link to={'/'}><h5 className={css.category + ' ' + css.homeLink }>Hem</h5></Link>
       </div>
-    })}
-  </aside>
+      {categories.map((category, j) => {
+        return <div>
+          <h5 key={j} className={css.category}>{category}</h5>
+          {
+            <ul className={css.list}>
+              {nodes
+                .filter(n => n.fields.category === category)
+                .map((n, i) =>
+                  <li key={i}>
+                    <Link to={n.fields.slug} className={css.link}>
+                      {n.frontmatter.title}
+                    </Link></li>)}
+            </ul>
+          }
+        </div>
+      })}
+    </aside>
+  </>
 }
