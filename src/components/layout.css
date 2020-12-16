@@ -624,9 +624,9 @@ code:before, code:after, tt:before, tt:after {
 pre code:before, pre code:after, pre tt:before, pre tt:after {
   content: "";
 }
-
+/* 
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
-}
+} */
