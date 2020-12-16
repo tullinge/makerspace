@@ -15,6 +15,8 @@ export default () => {
             })
         }
 
+        handleResize()
+
         window.addEventListener('resize', handleResize)
 
         return () => {
