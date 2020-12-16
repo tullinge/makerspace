@@ -30,13 +30,11 @@ export default () => {
   // TODO: This could and should probably be computed at build time instead of in this component. 
   const categories = uniques(nodes.map((node) => node.fields.category))
 
-  const isBigScreen = () => windowDimensions.innerWidth > 688
-
   return <>
   <p>{windowDimensions.innerWidth}</p>
     <FontAwesomeIcon
       icon={faBars}
-      style={{ display: !isBigScreen() ? 'block' : 'none' }}
+      style={{ display: windowDimensions.innerWidth < 688 ? 'block' : 'none' }}
       className={css.hamburger}
       size="2x"
       onClick={() => setOpen(!open)}
@@ -44,8 +42,8 @@ export default () => {
     <aside
       className={css.aside}
       style={{
-        position: !isBigScreen() ? 'fixed' : 'inherit',
-        visibility: !isBigScreen() && !open ? 'hidden' : 'visible'
+        position: windowDimensions.innerWidth < 688 ? 'fixed' : 'inherit',
+        visibility: windowDimensions.innerWidth < 688 && !open ? 'hidden' : 'visible'
       }}
     >
       <input type="text" className={css.input} />
