@@ -43,8 +43,8 @@ export default () => {
     <aside
       className={css.aside}
       style={{
-        // position: !isBigScreen() ? 'fixed' : 'inherit',
-        // visibility: !isBigScreen() && !open ? 'hidden' : 'visible'
+        position: !isBigScreen() ? 'fixed' : 'inherit',
+        visibility: !isBigScreen() && !open ? 'hidden' : 'visible'
       }}
     >
       <input type="text" className={css.input} />
