@@ -42,6 +42,7 @@
 
 .list {
     list-style: none;
+    margin-left: 0.5em;
 }
 
 .list > li {

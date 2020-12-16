@@ -15,6 +15,8 @@ export default () => {
             })
         }
 
+        console.log('windowDimensions', windowDimensions)
+
         handleResize()
 
         window.addEventListener('resize', handleResize)
