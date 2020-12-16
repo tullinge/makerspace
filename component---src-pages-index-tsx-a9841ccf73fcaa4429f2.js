@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{QeBL:function(e,a,t){"use strict";t.r(a);var n=t("q1tI"),l=t.n(n),r=t("Bl7J"),u=t("vrFN");a.default=function(){return l.a.createElement(r.a,null,l.a.createElement(u.a,{title:"Home"}),l.a.createElement("h1",null,"Tullinge Makerspace Wiki"),l.a.createElement("h2",null,"WORK IN PROGRESS"),l.a.createElement("p",null,"Här hittar du massor av hjälp för ditt skapande."))}}}]);
-//# sourceMappingURL=component---src-pages-index-tsx-a9841ccf73fcaa4429f2.js.map
