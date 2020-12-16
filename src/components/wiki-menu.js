@@ -35,7 +35,7 @@ export default () => {
   return <>
     <FontAwesomeIcon
       icon={faBars}
-      // style={{ display: !isBigScreen() ? 'block' : 'none' }}
+      style={{ display: !isBigScreen() ? 'block' : 'none' }}
       className={css.hamburger}
       size="2x"
       onClick={() => setOpen(!open)}
