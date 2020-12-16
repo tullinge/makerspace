@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{bZhl:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),l=a("Bl7J"),m=a("vrFN");t.default=function(e){var t=e.data;return r.a.createElement(l.a,null,r.a.createElement(m.a,{title:t.markdownRemark.frontmatter.title}),r.a.createElement("h1",null,t.markdownRemark.frontmatter.title),r.a.createElement("div",{dangerouslySetInnerHTML:{__html:t.markdownRemark.html}}))}}}]);
+//# sourceMappingURL=component---src-templates-wiki-entry-tsx-b1960cfb0617d5e72890.js.map
