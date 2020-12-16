@@ -38,7 +38,7 @@ export default () => {
   <p>{windowDimensions.innerWidth}</p>
     <FontAwesomeIcon
       icon={faBars}
-      style={{ display: windowDimensions.innerWidth < 688 ? 'block' : 'none' }}
+      style={{ display: 937 < 688 ? 'block' : 'none' }}
       className={css.hamburger}
       size="2x"
       onClick={() => setOpen(!open)}
