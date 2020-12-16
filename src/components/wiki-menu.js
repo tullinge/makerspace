@@ -33,6 +33,7 @@ export default () => {
   const isBigScreen = () => windowDimensions.innerWidth > 688
 
   return <>
+  <p>{windowDimensions.innerWidth}</p>
     <FontAwesomeIcon
       icon={faBars}
       style={{ display: !isBigScreen() ? 'block' : 'none' }}
