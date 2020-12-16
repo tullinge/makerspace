@@ -30,6 +30,10 @@ export default () => {
   // TODO: This could and should probably be computed at build time instead of in this component. 
   const categories = uniques(nodes.map((node) => node.fields.category))
 
+  React.useEffect(() => {
+    console.log('in wiki-menu.js', windowDimensions)
+  }, [ windowDimensions ])
+
   return <>
   <p>{windowDimensions.innerWidth}</p>
     <FontAwesomeIcon
@@ -51,8 +55,8 @@ export default () => {
         <Link to={'/'}><h5 className={css.category + ' ' + css.homeLink }>Hem</h5></Link>
       </div>
       {categories.map((category, j) => {
-        return <div>
-          <h5 key={j} className={css.category}>{category}</h5>
+        return <div key={j}>
+          <h5 className={css.category}>{category}</h5>
           {
             <ul className={css.list}>
               {nodes
