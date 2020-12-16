@@ -11,6 +11,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <h1>Tullinge Makerspace Wiki</h1>
+      <h2>WORK IN PROGRESS</h2>
       <p>Här hittar du massor av hjälp för ditt skapande.</p>
       {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
