@@ -33,13 +33,13 @@ export default () => {
   const isBigScreen = () => windowDimensions.innerWidth > 688
 
   return <>
-    {/* <FontAwesomeIcon
+    <FontAwesomeIcon
       icon={faBars}
       // style={{ display: !isBigScreen() ? 'block' : 'none' }}
       className={css.hamburger}
       size="2x"
       onClick={() => setOpen(!open)}
-    /> */}
+    />
     <aside
       className={css.aside}
       style={{
