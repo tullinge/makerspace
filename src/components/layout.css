@@ -25,6 +25,11 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
   display: block;
 }
 
+main {
+  padding: 30px;
+  flex-grow: 1;
+}
+
 audio, canvas, progress, video {
   display: inline-block;
 }

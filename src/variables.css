@@ -1,3 +1,6 @@
 :root {
-    --color-primary: black;
+    --color-primary: hsl(268,53%,57%);
+    --color-light: hsl(222,25%,87%);
+    --color-dark: hsl(222,20%,27%);
+    --color-darker: hsl(222,20%,19%);
 }
